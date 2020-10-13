@@ -4,9 +4,9 @@ import { Card,Button,CardGroup } from 'react-bootstrap';
 const Course = (props) => {
     const {instructor_name,course_name,picture,price} = props.course;
     return (
-        <div className="card-group row" style={{width: '18rem',alignItems: 'center',display: 'inlineBlock'}}>
-             <CardGroup>
-             <Card style={{margin:'30px',padding: '20px',backgroundColor: 'lightGreen',width: '70%'}}>
+        <div style={{width:'40%',alignItems: 'center'}}>
+             <CardGroup >
+             <Card style={{margin:'30px',padding: '20px',backgroundColor: 'lightGreen',}}>
                  <Card.Img variant="top" src={picture} />
                     <Card.Body>
                         <h2>{course_name}</h2>
@@ -15,6 +15,7 @@ const Course = (props) => {
                         <Button variant="primary" onClick={()=>{props.handleAddButton(props.course)}}>Enroll Now</Button>
                     </Card.Body>
                 </Card>
+                
              </CardGroup>
         </div>
     );

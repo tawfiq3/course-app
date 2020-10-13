@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Row } from 'react-bootstrap';
 import Count from '../Count/Count';
 import Course from '../Course/Course';
 import courseDetails from './Data.json'
@@ -18,13 +17,13 @@ const Home = () => {
         
     }
     return (
-        <div style={{display:'flex'}}>
-            <div>
-            {
+        <div style={{display: 'flex'}}>
+           <div style={{display: 'float'}}>
+                {
                 data.map(course => <Course course={course} handleAddButton={handleAddButton} key = {course.id}></Course> )
-            }
-            </div>
-            <div>
+                }
+           </div>
+            <div className="position-flexible">
                  <Count count={item}></Count>
             </div>
         </div>
