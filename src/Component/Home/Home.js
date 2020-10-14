@@ -18,12 +18,12 @@ const Home = () => {
     }
     return (
         <div style={{display: 'flex'}}>
-           <div style={{display: 'float'}}>
+           <div style={{display: 'float',width:"70%"}}>
                 {
                 data.map(course => <Course course={course} handleAddButton={handleAddButton} key = {course.id}></Course> )
                 }
            </div>
-            <div className="position-flexible">
+            <div className="position-static">
                  <Count count={item}></Count>
             </div>
         </div>
